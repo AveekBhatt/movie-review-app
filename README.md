@@ -1,5 +1,6 @@
 # movie-review-app
 
+Backend : -
 
 1. Core Technology & Setup
 
@@ -18,8 +19,6 @@
 The code is organized into three main components:
 
     Models: Define the data structure and interact with the database.
-
-    Views: (Note: This part is missing, which is standard for a pure API backend. The frontend would be a separate React/Vue/Angular app.)
 
     Controllers: Contain the logic for handling requests and sending responses.
 
