@@ -70,6 +70,75 @@ These files define the available URL paths (endpoints) and link them to the cont
 
         POST /api/movies/:id/reviews (protected - add a review to a movie)
 
+
+
+
+
+FRONTEND : -
+
+
+1. Core Technology & Setup
+
+    Framework: React (a JavaScript library for building user interfaces).
+
+    Build Tool: Vite (evidenced by vite.config.js, index.html in the root, and the project structure). Vite offers faster development server startup and hot module replacement (HMR) compared to tools like Create React App.
+
+    Styling: Tailwind CSS (a utility-first CSS framework, evidenced by tailwind.config.js and postcss.config.js).
+
+    Package Management: npm (evidenced by package.json and package-lock.json).
+
+    Entry Point: index.html is the single page, and main.jsx is the JavaScript entry point that renders the React app into it.
+
+2. Project Structure (/src/) - The Source Code
+
+This is where all the application logic and components live.
+
+    /assets/: A directory for static files like images, icons, and fonts.
+
+    /components/: Contains reusable React components.
+
+        Navbar.jsx: A component for the navigation bar that is likely displayed on every page.
+
+    /pages/: Contains top-level components that represent entire pages/screens of the application. Each page is composed of smaller components.
+
+        Home.jsx: The main landing page.
+
+        Login.jsx: The page for user authentication (login/register).
+
+        MoviePage.jsx: The page displaying details for a single movie, including its reviews.
+
+        PostAReview.jsx: A page or modal for writing and submitting a new review for a movie.
+
+        ProfilePage.jsx: The user's personal profile page, likely showing their watchlist and review history.
+
+        ListingPage.jsx: Probably a page that lists multiple movies (e.g., "Top Movies," "Search Results," "All Movies").
+
+    /utils/: Contains helper functions and configuration files used throughout the app.
+
+        axiosInstance.js: Crucial for API communication. This file likely creates a pre-configured instance of the Axios HTTP client with a base URL (pointing to your backend API) and might automatically attach authentication tokens to requests.
+
+        constants.js: A place to store application-wide constants like API endpoint URLs, theme colors, etc., to avoid "magic strings" scattered in the code.
+
+3. Key Application Files
+
+    App.jsx: The root React component. It typically contains the router definition and the overall layout structure (e.g., placing the <Navbar /> and rendering the current page component).
+
+    App.css / index.css: Global CSS styles. index.css is likely where the Tailwind CSS directives (@tailwind base; etc.) are imported.
+
+4. Configuration Files
+
+    tailwind.config.js: Configuration for Tailwind CSS (defining custom colors, fonts, themes, etc.).
+
+    vite.config.js: Configuration for the Vite build tool.
+
+    postcss.config.js: Configuration for PostCSS (a tool for transforming CSS), which is required for Tailwind to work.
+
+    .gitignore: Tells Git which files and folders to ignore (e.g., node_modules, .env).
+
+5. Dependencies (node_modules/)
+
+This folder contains all the third-party libraries (like react, react-dom, react-router-dom, axios, tailwindcss) installed via npm install. It is auto-generated and not included in version control.
+
 7. Dependencies (node_modules/)
 
 This folder contains all the third-party libraries (like express, jsonwebtoken, bcrypt, sequelize) installed via npm install. It is auto-generated and not included in version control.
